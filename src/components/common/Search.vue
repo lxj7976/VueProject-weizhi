@@ -7,7 +7,7 @@
 		</div>
 		<p>热门搜索</p>
 		<ul>
-			<li v-for='(item,index) in list'>
+			<li v-for='(item,index) in list' :key="index">
 				{{item}}
 			</li>
 		</ul>
