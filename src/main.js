@@ -6,6 +6,9 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+// 重置样式
+import './style/reset.less'
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
