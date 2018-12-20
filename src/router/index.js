@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Home from '@/components/pages/Home/Home'
 import Banner from 'common/Banner'
+import Search from '@/components/common/Search'
+
 Vue.use(Router)
 
 export default new Router({
@@ -19,6 +21,10 @@ export default new Router({
     {
       path:'/banner',
       component: Banner
+		},
+		{
+    	path:"/search",
+    	component:Search
     }
   ]
 })
