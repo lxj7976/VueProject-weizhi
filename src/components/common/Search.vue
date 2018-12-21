@@ -14,19 +14,77 @@
 	</div>
 </template>
 
+
 <script>
 
+import Vue from 'vue'
+import jsonp from 'jsonp'
 export default{
 	name:'Search',
 	data(){
 		return{
-			list:["戚风","蛋挞","生日蛋糕","披萨","吐司","曲奇","牛轧糖","蛋黄酥","雪花酥"]
+			list:["戚风","蛋挞","生日蛋糕","披萨","吐司","曲奇","牛轧糖","蛋黄酥","雪花酥"],
+			value:'test'
 		}
 	},
 	props:['',''],
 	methods:{
-		
+
 	},
+//	mounted(){
+//		function test(){
+//			console.log(1111)
+//		}
+//		jsonp("https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+this.value+
+//						"&json=1&p=3&sid=22084_1436_13548_21120_22036_22073&req=2&csor=0&cb=test",null,(err,data)=>{
+//							console.log(2222)
+//							if(err){
+//								console.log(err)
+//							}
+//							console.log(data)
+//						})
+//						
+//		var inp=document.getElementById("inp");
+//		var ul;
+//		inp.addEventListener("input",inputHandler);
+//		var script;
+//		function inputHandler(e){
+//			if(script){
+//				script.remove();
+//				script=null;
+//			}
+//			script=document.createElement('script');
+//			script.src="https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+this.value+
+//						"&json=1&p=3&sid=22084_1436_13548_21120_22036_22073&req=2&csor=0&cb=callback";
+//			document.body.appendChild(script);
+//			Vue.nextTick(function callback(data){
+//				if(ul){
+//					ul.remove();
+//					ul=null;
+//				}
+//				ul=document.createElement('ul');
+//				for(var i=0;i<data.s.length;i++){
+//					var li=document.createElement("li");
+//					li.textContent=data.s[i];
+//					ul.appendChild(li);
+//				}
+//				document.body.appendChild(ul)
+//			})
+//		}
+//		function callback(data){
+//			if(ul){
+//				ul.remove();
+//				ul=null;
+//			}
+//			ul=document.createElement('ul');
+//			for(var i=0;i<data.s.length;i++){
+//				var li=document.createElement("li");
+//				li.textContent=data.s[i];
+//				ul.appendChild(li);
+//			}
+//			document.body.appendChild(ul)
+//		}
+//	}
 }
 
 
