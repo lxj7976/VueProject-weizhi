@@ -1,7 +1,7 @@
 <template>
 	<div id="search">
 		<div class="header">
-			<span>&lt;</span>
+			<span	@click='goback'>&lt;</span>
 			<input type="text" id="inp" placeholder="搜索食谱/食材，烘焙/家常菜一应俱全" />
 			<span class="btn">搜索</span>
 		</div>
@@ -29,7 +29,9 @@ export default{
 	},
 	props:['',''],
 	methods:{
-
+		goback(){
+			this.$router.push('/home')
+		}
 	},
 //	mounted(){
 //		function test(){
@@ -91,7 +93,7 @@ export default{
 
 </script>
 
-<style type="text/css">
+<style type="text/css"	scoped>
 	#search{width: 100%;}
 	.header{
 		width: 100%;
@@ -105,7 +107,7 @@ export default{
 		font-size: 30px;
 		line-height: 44px;
 		color: #666;
-		margin: 0 20px 0 15px;
+		padding: 0 20px 0 15px;
 	}
 	.header #inp{
 		display: inline-block;

@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Home from '@/components/pages/Home/Home'
 import Banner from 'common/Banner'
 import Search from '@/components/common/Search'
+import Header from '@/components/common/Header'
 
 Vue.use(Router)
 
@@ -25,6 +26,10 @@ export default new Router({
 		{
     	path:"/search",
     	component:Search
+   },
+   {
+    	path:"/header",
+    	component:Header
     }
   ]
 })
