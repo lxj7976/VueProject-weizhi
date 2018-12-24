@@ -9,7 +9,7 @@ import Banner from '../../common/Banner'
 export default {
   data () {
     return {
-      rootPath:'http://47.95.207.1:3000',
+      rootPath:'http://47.95.207.1:8080',
       banners:[]
     }
   },

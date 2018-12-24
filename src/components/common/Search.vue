@@ -69,8 +69,9 @@ export default{
 		margin: 0 0px 0 10px;
 	}
 	#search ul{
-/*		width: 96%;*/
+		width: 96%;
 		height: 200px;
+		padding: 0 15px;
 	}
 	#search ul li{
 		font-size: 18px;
