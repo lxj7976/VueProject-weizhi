@@ -4,6 +4,8 @@ import Home from '@/components/pages/Home/Home'
 import Banner from 'common/Banner'
 import Search from '@/components/common/Search'
 import Baking from 'pages/Baking/Baking'
+import School from 'pages/School/School'
+import My from 'pages/My/My'
 Vue.use(Router)
 
 export default new Router({
@@ -27,6 +29,14 @@ export default new Router({
     {
       path:'/baking',
       component:Baking
+    },
+    {
+      path:'/school',
+      component:School
+    },
+    {
+      path:'/my',
+      component:My
     }
   ]
 })

@@ -1,11 +1,13 @@
 <template>
   <div class="home">
     <Banner :list="banners"></Banner>
+    <TabBar />
   </div>
 </template>
 
 <script>
 import Banner from '../../common/Banner'
+import TabBar from '../../common/TabBar'
 export default {
   data () {
     return {
@@ -14,7 +16,7 @@ export default {
     }
   },
   components:{
-    Banner
+    Banner,TabBar
   },
   methods:{
     initData(){
