@@ -1,7 +1,7 @@
 <template>
 	<div id="header">
 		<span>+</span>
-		<input type="text" id="inp" placeholder="搜索食谱/食材，烘焙/家常菜一应俱全" />
+		<input type="text"	@click="goSearch" id="inp" placeholder="搜索食谱/食材，烘焙/家常菜一应俱全" />
 		<img class="btn" src="https://image.hongbeibang.com/FnuB0vCfzLhV-aolTl0hdoaTCZMJ?48X48&imageView2/1/w/48/h/48" alt="" />
 	</div>
 </template>
@@ -16,7 +16,9 @@ export default{
 	},
 	props:[],
 	methods:{
-		
+		goSearch(){
+			this.$router.push("/search")
+		}
 	}
 }
 </script>
