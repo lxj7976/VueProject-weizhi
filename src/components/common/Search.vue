@@ -30,7 +30,7 @@ export default{
 	props:['',''],
 	methods:{
 		goback(){
-			this.$router.push('/home')
+			this.$router.back()
 		}
 	},
 //	mounted(){
