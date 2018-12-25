@@ -26,6 +26,11 @@ export default{
 <style lang="less" scoped="">
 @import url(../../style/main.less);
 #header{
+	position:fixed;
+	z-index:3;
+	left:0;
+	right:0;
+	top:0;
 	.w(375);
 	.h(44);
 	background:#fff;
@@ -46,6 +51,7 @@ export default{
 		padding: 5px 0 5px 0;
 		margin-top:5px ;
 		background: #f5f7f9;
+		opacity: 0.7;
 	};
 	.btn{
 		display: block;

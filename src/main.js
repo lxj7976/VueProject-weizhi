@@ -17,8 +17,6 @@ import Axios from 'axios'
 // Axios 请求拦截器
 Axios.interceptors.response.use(function (response) {
     // Do something with response data
-    console.log('响应拦截器')
-    console.log(response)
     return response.data;
   }, function (error) {
     // Do something with response error

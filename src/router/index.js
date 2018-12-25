@@ -6,7 +6,7 @@ import Search from 'common/Search'
 import Baking from 'pages/Baking/Baking'
 import School from 'pages/School/School'
 import My from 'pages/My/My'
-import Header from 'common/Header'
+import ImgList from 'common/ImgList'
 
 
 Vue.use(Router)
@@ -21,10 +21,6 @@ export default new Router({
       path:'/home',
       component: Home
     },
-    {
-      path:'/banner',
-      component: Banner
-		},
 		{
     	path:"/search",
     	component:Search
@@ -41,10 +37,5 @@ export default new Router({
       path:'/my',
       component:My
    },
-   {
-    	path:"/header",
-    	component:Header
-    }
-    
   ]
 })
