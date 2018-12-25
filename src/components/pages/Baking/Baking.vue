@@ -1,11 +1,16 @@
 <template>
     <div>
-        <Nav />
+        <div class="navBox">
+            <Nav class="nav"/>
+        </div>
+        <router-view></router-view>
+        
+        <div>aaa</div>
         <TabBar />
     </div>
 </template>
 <script>
-import Nav from './nav.vue'
+import Nav from './nav'
 import TabBar from '../../common/TabBar'
 export default {
     components:{
@@ -14,5 +19,8 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-
+@import url(../../../style/main.less);
+.navBox{
+    .m_b(45)
+}   
 </style>

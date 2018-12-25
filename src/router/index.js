@@ -7,8 +7,6 @@ import Baking from 'pages/Baking/Baking'
 import School from 'pages/School/School'
 import My from 'pages/My/My'
 import Header from 'common/Header'
-
-
 import Focus from 'pages/Baking/table/Focus'
 import New from 'pages/Baking/table/New'
 import Excellent from 'pages/Baking/table/Excellent'
@@ -34,13 +32,13 @@ export default new Router({
     },
     {
       path:'/baking',
+      component:Baking,
       children:[
         {path:'focus',component:Focus},
         {path:'new',component:New},
         {path:'excellent',component:Excellent},
         {path:'',component:New}
-      ],
-      component:Baking
+      ]
     },
     {
       path:'/school',
@@ -53,7 +51,10 @@ export default new Router({
    {
     	path:"/header",
     	component:Header
+    },
+    {
+    	path:"/a",
+    	component:Focus
     }
-    
   ]
 })
