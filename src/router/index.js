@@ -4,6 +4,9 @@ import Home from '@/components/pages/Home/Home'
 import Banner from 'common/Banner'
 import Search from '@/components/common/Search'
 import Baking from 'pages/Baking/Baking'
+import Focus from 'pages/Baking/table/Focus'
+import New from 'pages/Baking/table/New'
+import Excellent from 'pages/Baking/table/Excellent'
 Vue.use(Router)
 
 export default new Router({
@@ -26,6 +29,11 @@ export default new Router({
     },
     {
       path:'/baking',
+      children:[
+        {path:'focus',component:Focus},
+        {path:'new',component:New},
+        {path:'excellent',component:Excellent}
+      ],
       component:Baking
     }
   ]
