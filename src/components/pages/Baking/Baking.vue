@@ -4,8 +4,6 @@
             <Nav class="nav"/>
         </div>
         <router-view></router-view>
-        
-        <div>aaa</div>
         <TabBar />
     </div>
 </template>
