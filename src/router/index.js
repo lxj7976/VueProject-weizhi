@@ -32,7 +32,8 @@ export default new Router({
       children:[
         {path:'focus',component:Focus},
         {path:'new',component:New},
-        {path:'excellent',component:Excellent}
+        {path:'excellent',component:Excellent},
+        {path:'',component:New}
       ],
       component:Baking
     }
