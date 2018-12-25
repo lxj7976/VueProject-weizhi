@@ -10,6 +10,7 @@ import Header from 'common/Header'
 import Focus from 'pages/Baking/table/Focus'
 import New from 'pages/Baking/table/New'
 import Excellent from 'pages/Baking/table/Excellent'
+import Comment from 'pages/Baking/table/discuss'
 Vue.use(Router)
 
 export default new Router({
@@ -53,8 +54,8 @@ export default new Router({
     	component:Header
     },
     {
-    	path:"/a",
-    	component:Focus
+      path:"/a",
+      component:Comment
     }
   ]
 })

@@ -19,6 +19,5 @@ export default {
 <style lang="less" scoped>
 @import url(../../../style/main.less);
 .navBox{
-    .m_b(45)
 }   
 </style>

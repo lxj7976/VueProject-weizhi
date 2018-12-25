@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="nav">
         <div class="navBox">
             <div id="left">
                 <img src="https://image.hongbeibang.com/FuJof8xufLvs1qA3KdA2n1bGDvEQ?48X48&imageView2/1/w/48/h/48" alt="">
@@ -29,7 +29,12 @@ export default {
 </script>
 <style lang="less" scoped>
 @import url(../../../style/main.less);
+#nav{
+    .h(45);
+    
+    
 .navBox{
+    background: white;
     .h(45);
     position: fixed;
     top: 0;
@@ -38,7 +43,7 @@ export default {
     .fs(16);
      display: flex;
      justify-content: space-between;
-    margin: 0 12.5px;
+    margin: 0 10px;
     #left{
         .w(25);
         img{
@@ -77,5 +82,6 @@ export default {
 .class{
     .h(45);
     background: green;
+}
 }
 </style>

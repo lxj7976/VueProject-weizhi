@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id='new'>
         <div class="bakingActivities">
             <div class="imgbox" v-for="(item,index) in list" :key="index">
                 <img :src="item.image" alt="">
@@ -12,23 +12,28 @@
                 <!-- </div> -->
             </div>
         </div>
+        <Discuss />
     </div>
 </template>
 <script>
+import Discuss from './discuss'
 export default {
     data(){
         return {
             list:[],
             titles:[],
+            comments:[],
             bgcolor:['#94BFBB','#927472','#E5AA9C','#5BADA6','#b78b9f','#acbcc9','#8f7671','#acb99b','#aca6bb','#c3d0ad']
         }
     },
     components:{
+        Discuss
     },
     methods:{
         initData(){
             let url = 'https://api.hongbeibang.com/feed/getCategory?_t=1545733197565&'
-            let titles = 'https://api.hongbeibang.com/community/getByLimit?isShow=4&_t=1545733197642&pageIndex=0&pageSize=99'
+            let titles = 'https://api.hongbeibang.com/community/getByLimit?isShow=4&_t=1545733197642&pageIndex=0&pageSize=99';
+            
             this.$axios.get(url)
             .then((res)=>{
                 // console.log(res.data.category[0].item);
@@ -37,14 +42,16 @@ export default {
             .catch((err)=>{
                 console.log(err);
             })
+            // 标题
             this.$axios.get(titles)
             .then((res)=>{
-                console.log(res.data.data)
+                // console.log(res.data.data)
                 this.titles=res.data.data;
             })
             .catch((err)=>{
                 console.log(err)
             })
+            
         }
     },
     
@@ -56,9 +63,12 @@ export default {
 </script>
 <style lang="less" scoped>
 @import url(../../../../style/main.less);
-.bakingActivities{
+#new{
+    .p_l(10);  
+    .p_r(10);
+    .w(355);  
+    .bakingActivities{
     display: flex;
-    .w(375);
     overflow: auto;
     .imgbox{
         .w(150);
@@ -76,8 +86,6 @@ export default {
 .titles{
     display: flex;
     overflow: auto;
-    .w(375);
-    // overflow: auto;
     .p_t(10);
     .p_b(10);
     .titlesBox{
@@ -99,4 +107,6 @@ export default {
         }
     }
 }
+}
+
 </style>

@@ -1,4 +1,5 @@
 <template>
+<div>
     <div id="tabbar">
         <mt-tabbar v-model="selected">
         <mt-tab-item v-for="(item,index) in tab" :key="index">
@@ -10,8 +11,11 @@
              </router-link>
         </mt-tab-item>
         </mt-tabbar>
-        <div id='kong'></div>
+        
     </div>
+    <div id='kong'></div>
+</div>
+    
 </template>
 <script>
 export default {
@@ -47,8 +51,9 @@ export default {
     .router-link-active{
         color: #E98B71;
     }
-    #kong{
-        .h(55);
-    }
+    
+}
+#kong{
+    .h(55);
 }
 </style>
