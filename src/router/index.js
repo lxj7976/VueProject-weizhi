@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from 'pages/Home/Home'
-import Banner from 'common/Banner'
 import Search from 'common/Search'
 import Baking from 'pages/Baking/Baking'
 import School from 'pages/School/School'
@@ -23,10 +22,6 @@ export default new Router({
       path:'/home',
       component: Home
     },
-    {
-      path:'/banner',
-      component: Banner
-		},
 		{
     	path:"/search",
     	component:Search

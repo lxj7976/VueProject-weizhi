@@ -19,7 +19,6 @@ export default {
 	methods:{
 		initswiper(){
             this.banners=this.list	
-            console.log(this.banners)	
 		}
 	},
 	watch:{
@@ -34,6 +33,7 @@ export default {
 
 #banner{
     .h(200);
+    .w(375);
     img{
         width: 100%;
     }
